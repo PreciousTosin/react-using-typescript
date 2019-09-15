@@ -8,6 +8,7 @@
     "@types/react-redux": "7.1.2",
     "@types/react-router-dom": "4.3.5",
     "@types/react-router-redux": "5.0.18",
+    "animate.css": "3.7.2",
     "connected-react-router": "6.5.2",
     "history": "4.9.0",
     "react": "16.8.4",
