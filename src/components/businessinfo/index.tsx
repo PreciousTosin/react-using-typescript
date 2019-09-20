@@ -73,8 +73,8 @@ class BusinessInformation extends React.Component {
               What country are you based in?
             </label>
             <select name="country" id="countrySelect">
-              <option value="nigeria">Nigeria</option>
-              <option value="kenya">Kenya</option>
+              {/*<option value="nigeria">Nigeria</option>
+              <option value="kenya">Kenya</option> */}
             </select>
           </div>
 

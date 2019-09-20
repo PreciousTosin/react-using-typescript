@@ -2,6 +2,21 @@ import * as React from "react";
 
 import "./style.scss";
 
+const optionsData = [
+  {
+    label: "Web Design",
+    value: "web design"
+  },
+  {
+    label: "Web Development",
+    value: "web development"
+  },
+  {
+    label: "SEO",
+    value: "seo"
+  }
+];
+
 class Select extends React.Component {
   constructor(props) {
     super(props);
@@ -24,66 +39,25 @@ class Select extends React.Component {
     return (
       <div className="select-wrapper">
         <div className="select" tabIndex={1}>
-          <input
-            className="options-select"
-            name="selectors"
-            type="radio"
-            id="opt1"
-            value="web design"
-            onChange={this.onChangeSelected}
-            checked={selected === "web design"}
-          />
-          <label htmlFor="opt1" className="option">
-            Web Design
-          </label>
-          <input
-            className="options-select"
-            name="selectors"
-            type="radio"
-            id="opt2"
-            value="web development"
-            onChange={this.onChangeSelected}
-            checked={selected === "web development"}
-          />
-          <label htmlFor="opt2" className="option">
-            Web Development
-          </label>
-          <input
-            className="options-select"
-            name="selectors"
-            type="radio"
-            id="opt3"
-            value="seo"
-            onChange={this.onChangeSelected}
-            checked={selected === "seo"}
-          />
-          <label htmlFor="opt3" className="option">
-            SEO
-          </label>
-          <input
-            className="options-select"
-            name="selectors"
-            type="radio"
-            id="opt5"
-            value="graphic designer"
-            onChange={this.onChangeSelected}
-            checked={selected === "graphic designer"}
-          />
-          <label htmlFor="opt5" className="option">
-            Graphic Designer
-          </label>
-          <input
-            className="options-select"
-            name="selectors"
-            type="radio"
-            id="opt6"
-            value="video editor"
-            onChange={this.onChangeSelected}
-            checked={selected === "video editor"}
-          />
-          <label htmlFor="opt6" className="option">
-            Video Editor
-          </label>
+          {optionsData.map(option => {
+            return (
+              <React.Fragment>
+                <input
+                  className="options-select"
+                  name="selectors"
+                  type="radio"
+                  id={option.value}
+                  value={option.value}
+                  onChange={this.onChangeSelected}
+                  checked={selected === `${option.value}`}
+                />
+                <label htmlFor={option.value} className="option">
+                  <span className="option-icon" />
+                  {option.label}
+                </label>
+              </React.Fragment>
+            );
+          })}
         </div>
       </div>
     );
