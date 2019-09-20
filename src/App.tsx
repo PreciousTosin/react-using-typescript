@@ -8,6 +8,7 @@ import { authenticate } from "./store/auth/actions";
 import getUsers from "./api/sagas/users/index";
 
 import Home from "./components/home";
+import BusinessInformation from "./components/businessinfo";
 
 // import "./api/sagas/index";
 
@@ -34,7 +35,7 @@ function App(props: AppProps) {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/test" component={TestComponent} />
-        {/*<Route path="/test" component={Test} />*/}
+        <Route path="/register" component={BusinessInformation} />
       </Switch>
     </div>
   );

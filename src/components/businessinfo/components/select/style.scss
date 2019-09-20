@@ -1,0 +1,89 @@
+.select-wrapper {
+  background: #333;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+  padding:0;
+  margin:0;
+  font-family: sans-serif;
+  color:#333;
+
+  .select {
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:350px;
+    height:40px;
+  }
+   
+  .option {
+    padding:0 30px 0 10px;
+    min-height:40px;
+    display:flex;
+    align-items:center;
+    background:  #E5E5E5;
+    border-top:#222 solid 1px;
+    position:absolute;
+    top:0;
+    width: 100%;
+    pointer-events:none;
+    order:2;
+    z-index:1;
+    transition:background .4s ease-in-out;
+    box-sizing:border-box;
+    overflow:hidden;
+    white-space:nowrap;
+    
+  }
+   
+  .option:hover {
+    background: #009fe4;
+  }
+   
+  .select:focus .option {
+    position:relative;
+    pointer-events:all;
+  }
+   
+  input {
+    opacity:0;
+    position:absolute;
+    left:-99999px;
+  }
+   
+  input:checked + label {
+    order: 1;
+    z-index:2;
+    /*background: #FF595C;*/
+    border-top:none;
+    position:relative;
+    color: #252b33;
+  }
+   
+  input:checked + label:after {
+    content:'';
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7">
+    <path fill="#8C8C8C" fill-rule="evenodd" stroke="#8C8C8C" stroke-width=".715" d="M1.232.676a.333.333 0 0 0-.107.243c0 .088.036.176.107.243l5.484 5.162a.382.382 0 0 0 .517 0l5.485-5.162a.33.33 0 0 0 0-.486.382.382 0 0 0-.517 0L6.975 5.594 1.749.676a.382.382 0 0 0-.517 0z"/>
+</svg>') no-repeat;
+    width: 14px; 
+    height: 7px; 
+    /*border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;*/
+    position:absolute;
+    right:10px;
+    top:calc(50% - 2.5px);
+    pointer-events:none;
+    z-index:3;
+  }
+   
+  input:checked + label:before {
+    position:absolute;
+    right:0;
+    height: 40px;
+    width: 40px;
+    content: '';
+    /*background: #050505; */
+  }
+}

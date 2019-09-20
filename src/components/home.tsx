@@ -38,6 +38,9 @@ const Home = (props: HomeProps) => {
       <div>
         <Link to="/test">GO TO TEST</Link>
       </div>
+      <div>
+        <Link to="/register">REGISTER BUSINESS</Link>
+      </div>
       <button type="button" onClick={getUsers}>
         GET USERS
       </button>

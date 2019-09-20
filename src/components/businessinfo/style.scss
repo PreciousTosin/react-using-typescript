@@ -1,0 +1,41 @@
+.business-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 37px);
+
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  label.form-control-label {
+    text-align: left;
+  }
+  
+  input.form-control-input  {}
+  
+  input.form-control-input, select {
+    padding: 10px 5px;
+    border: solid 1px #e6e6e6;
+    border-radius: 2px;
+  }
+  
+  input[type="radio"].form-control-input  {
+    display: none;
+  }
+  
+  input[type="radio"] + label.form-control-label  {
+    display: block;
+    margin-bottom: 10px;
+    border: solid 1px #e6e6e6;
+    padding: 10px 5px;
+    cursor: pointer;
+  }
+  
+  input[type="radio"].form-control-input:checked + label.form-control-label  {
+    border: 2px solid green;
+  }
+}
