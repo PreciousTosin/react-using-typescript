@@ -3,34 +3,60 @@ import * as React from "react";
 import "./style.scss";
 
 import Select from "./components/select";
+import NaijaIcon from "./components/icons/naija";
+
+const optionsData = [
+  {
+    label: "Nigeria",
+    value: "nigeria",
+    svg: NaijaIcon
+  },
+  {
+    label: "Kenya",
+    value: "kenya",
+    svg: NaijaIcon
+  },
+  {
+    label: "Uganda",
+    value: "uganda",
+    svg: NaijaIcon
+  }
+];
 
 class BusinessInformation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedOption: ""
+      businessOption: ""
     };
 
-    this.handleSelected = this.handleSelected.bind(this);
+    this.handleBusinessSelected = this.handleBusinessSelected.bind(this);
+    this.handleCountrySelected = this.handleCountrySelected.bind(this);
   }
 
-  handleSelected(e) {
+  handleBusinessSelected(e) {
     const { target } = e;
     const { value } = target;
     this.setState({
-      selectedOption: value
+      businessOption: value
     });
+  }
+
+  handleCountrySelected(value) {
+    console.log("COUNTRY SELECTED IS: ", value);
   }
 
   render() {
     // @ts-ignore
-    const { selectedOption } = this.state;
+    const { businessOption } = this.state;
     return (
       <div className="business-info-wrapper">
         <h1>ENTER YOUR BUSINESS INFORMATION</h1>
         <form>
           <div className="form-control">
-            <label htmlFor="companyName">Business/Company Name</label>
+            <label className="form-control-label" htmlFor="companyName">
+              Business/Company Name
+            </label>
             <input
               name="name"
               id="companyName"
@@ -48,8 +74,8 @@ class BusinessInformation extends React.Component {
               id="registeredBus"
               className="form-control-input"
               type="radio"
-              checked={selectedOption === "registered"}
-              onChange={this.handleSelected}
+              checked={businessOption === "registered"}
+              onChange={this.handleBusinessSelected}
             />
 
             <label className="form-control-label" htmlFor="registeredBus">
@@ -60,8 +86,8 @@ class BusinessInformation extends React.Component {
               id="starterBus"
               className="form-control-input"
               type="radio"
-              checked={selectedOption === "starter"}
-              onChange={this.handleSelected}
+              checked={businessOption === "starter"}
+              onChange={this.handleBusinessSelected}
             />
             <label className="form-control-label" htmlFor="starterBus">
               STARTER
@@ -80,7 +106,11 @@ class BusinessInformation extends React.Component {
 
           <div className="form-control">
             <label className="form-control-label">select an option</label>
-            <Select />
+            <Select
+              options={optionsData}
+              name="country"
+              onChange={this.handleCountrySelected}
+            />
           </div>
         </form>
       </div>

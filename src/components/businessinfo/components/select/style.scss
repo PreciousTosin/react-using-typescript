@@ -37,12 +37,16 @@
     
   }
 
-  .option:checked:hover {
+  input:checked + label:hover {
     background: #E5E5E5;
   }
    
   .option:hover {
     background: #009fe4;
+  }
+
+  .option-icon {
+    margin-right: 15px;
   }
    
   .select:focus .option {
