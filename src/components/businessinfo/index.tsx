@@ -4,6 +4,9 @@ import "./style.scss";
 
 import Select from "./components/select";
 import NaijaIcon from "./components/icons/naija";
+import BusinessType from "./components/businesstype";
+
+import { ReactComponent as TipIcon } from "./components/icons/tip-icon.svg";
 
 const optionsData = [
   {
@@ -22,6 +25,17 @@ const optionsData = [
     svg: NaijaIcon
   }
 ];
+
+const NameTip = () => (
+  <div className="business-tip">
+    <TipIcon />
+    <div>
+      If your business is registered, please ensure that the <br />
+      business name provided is the same name on your <br /> registration
+      documents.
+    </div>
+  </div>
+);
 
 class BusinessInformation extends React.Component {
   constructor(props) {
@@ -53,7 +67,8 @@ class BusinessInformation extends React.Component {
       <div className="business-info-wrapper">
         <h1>ENTER YOUR BUSINESS INFORMATION</h1>
         <form>
-          <div className="form-control">
+          <div className="form-control name-control">
+            <NameTip />
             <label className="form-control-label" htmlFor="companyName">
               Business/Company Name
             </label>
@@ -66,32 +81,10 @@ class BusinessInformation extends React.Component {
             />
           </div>
           <div className="form-control business-type">
-            <label className="form-control-label">
-              What type of business do you run?
-            </label>
-            <input
-              value="registered"
-              id="registeredBus"
-              className="form-control-input"
-              type="radio"
-              checked={businessOption === "registered"}
-              onChange={this.handleBusinessSelected}
+            <BusinessType
+              businessOption={businessOption}
+              handleBusinessSelected={this.handleBusinessSelected}
             />
-
-            <label className="form-control-label" htmlFor="registeredBus">
-              REGISTERED
-            </label>
-            <input
-              value="starter"
-              id="starterBus"
-              className="form-control-input"
-              type="radio"
-              checked={businessOption === "starter"}
-              onChange={this.handleBusinessSelected}
-            />
-            <label className="form-control-label" htmlFor="starterBus">
-              STARTER
-            </label>
           </div>
 
           <div className="form-control">

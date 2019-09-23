@@ -1,0 +1,55 @@
+.business-info-wrapper {
+  .business-type {
+    .business-type-label {
+      position: relative;
+      height: 40px;
+      font-size: 15px;
+    }
+
+    .icon, .content, .sub-content {
+      position: absolute;
+    }
+
+    .icon {
+      top: 15%;
+      left: 3.1%;
+    }
+
+    .content {
+      top: 15%;
+      left: 11%;
+      color: #252b33;
+    }
+
+    .sub-content {
+      bottom: 21%;
+      left: 11%;
+      color: #252b33;
+      opacity: 0.7;
+    }
+
+    input[type="radio"].form-control-input  {
+      display: none;
+    }
+
+    input[type="radio"] + label.form-control-label  {
+      display: block;
+      margin-bottom: 10px;
+      border: solid 1px #e6e6e6;
+      padding: 10px 5px;
+      cursor: pointer;
+    }
+
+    input[type="radio"].form-control-input:checked + label.form-control-label  {
+      border: 1px solid #009fe4;
+    }
+
+    input[type="radio"].form-control-input:checked + label svg path {
+      fill: #009fe4;
+    }
+
+    input[type="radio"].form-control-input:checked + label .content {
+      color: #009fe4;
+    }
+  }
+}

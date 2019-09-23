@@ -4,6 +4,12 @@
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 37px);
+  width: 541px;
+  margin: 0 auto;
+
+  form {
+    width: 100%;
+  }
 
   .form-control {
     display: flex;
@@ -22,20 +28,37 @@
     border: solid 1px #e6e6e6;
     border-radius: 2px;
   }
-  
-  input[type="radio"].form-control-input  {
-    display: none;
+
+  .name-control {
+    position: relative;
+  }
+
+  .business-tip {
+    display:none;
+    content:'';
+    position:absolute;
+    text-align: left;
+    top:30%;
+    right:-60%;
+    padding:10px;
+    background:#dfe5e8;
+    color:#252b33;
+    z-index:9;
+    font-size: 0.75em;
+    line-height:18px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    white-space:nowrap;
+    word-wrap:normal;
   }
   
-  input[type="radio"] + label.form-control-label  {
-    display: block;
-    margin-bottom: 10px;
-    border: solid 1px #e6e6e6;
-    padding: 10px 5px;
-    cursor: pointer;
+  .name-control:hover .business-tip {
+    display:block;
   }
-  
-  input[type="radio"].form-control-input:checked + label.form-control-label  {
-    border: 2px solid green;
-  }
+
+  /*.business-tip:hover:before,
+  .business-tip:hover:after {
+    display:block;
+  } */
 }
