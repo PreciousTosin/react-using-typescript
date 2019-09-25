@@ -1,0 +1,70 @@
+.SelectDropdown {
+  position: relative;
+  border: 1px solid green;
+}
+
+.SelectDropdown .value-container {
+  padding-right: 10px;
+  cursor: pointer;
+}
+
+.SelectDropdown .value-container::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.SelectDropdown .value-container .value {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(100% - 10px);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.SelectDropdown .value-container .icon {
+  width: 10px;
+  height: 10px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.SelectDropdown .value-container .icon svg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.SelectDropdown .dropdown-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  margin-top: 5px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.02),
+    0 4px 5px 0 rgba(0, 0, 0, 0.04), 0 1px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.SelectDropdown .dropdown-container ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.SelectDropdown .dropdown-container ul li {
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.SelectDropdown .dropdown-container ul li .name {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}

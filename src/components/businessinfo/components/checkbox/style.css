@@ -1,0 +1,45 @@
+.mx-checkbox {
+  display: inline-block;
+  width: 16px; 
+  height: 16px;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.mx-checkbox span{
+  position: absolute;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 3px;
+  border: 1px solid #bbb;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mx-checkbox span:before{
+  content: "\2713";
+  position: absolute;
+  top: 0; left: 0;  right: 0; bottom: 0;
+  opacity: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 15px;
+  vertical-align: middle;
+  color: white;
+  font-weight: bold;
+}
+
+.mx-checkbox.active span {
+  background-color: white;
+}
+
+.mx-checkbox.active span:before{
+  color: #888;
+  opacity: 1;
+  transition: color .3 ease-out;
+}
+
+
