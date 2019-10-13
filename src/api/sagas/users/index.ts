@@ -20,8 +20,6 @@ function* getUsers() {
 }
 
 export default function* watchgetUsersSaga() {
-  console.log("CALLED WATCHER");
-  // yield "WATCHER CALL";
   yield takeLatest("RECEIVE_USERS_SAGA", getUsers);
 }
 

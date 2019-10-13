@@ -12,7 +12,6 @@ export default function usersReducer(
   state = initialState,
   action: ReceiveUsersActionType
 ): UsersState {
-  console.log("USER REDUCER");
   if (action.type === RECEIVE_USERS) {
     return {
       ...state,

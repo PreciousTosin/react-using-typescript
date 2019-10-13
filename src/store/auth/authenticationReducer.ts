@@ -12,7 +12,6 @@ export default function authenticateReducer(
   state = initialState,
   action: AuthenticateActionType
 ): AuthState {
-  console.log("AUTH REDUCER");
   if (action.type === AUTHENTICATE) {
     console.log("AUTHENTICATE");
     return {

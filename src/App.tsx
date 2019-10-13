@@ -9,6 +9,7 @@ import getUsers from "./api/sagas/users/index";
 
 import Home from "./components/home";
 import BusinessInformation from "./components/businessinfo";
+import Tx from "./components/tx";
 
 // import "./api/sagas/index";
 
@@ -36,6 +37,7 @@ function App(props: AppProps) {
         <Route exact path="/" component={Home} />
         <Route path="/test" component={TestComponent} />
         <Route path="/register" component={BusinessInformation} />
+        <Route path="/tx" component={Tx} />
       </Switch>
     </div>
   );

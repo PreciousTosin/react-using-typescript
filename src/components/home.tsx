@@ -52,6 +52,9 @@ const Home = (props: HomeProps) => {
           HIDE TOAST
         </button>
       </div>
+      <div>
+        <Link to="/tx">Tx</Link>
+      </div>
 
       <ToastBox
         show={toastBoxShow}
