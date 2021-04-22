@@ -1,0 +1,23 @@
+.home{
+  margin: 5px 20px;
+  .page-header {
+    text-align: center;
+  }
+
+  .home-nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 20px;
+
+    a {
+      text-decoration: none;
+      color: #696969;
+      font-weight: 700;
+    }
+  }
+
+  .test-animation-box {
+    margin-top: 30px;
+  }
+}

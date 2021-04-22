@@ -1,0 +1,20 @@
+.animation-home {
+  margin: 30px;
+  padding: 20px;
+
+  .back-button {
+    margin: 0 0 20px;
+
+    a {
+      text-decoration: none;
+      color: #696969;
+    }
+  }
+
+  .animation-playground {
+
+    > p {
+      font-weight: 700;
+    }
+  }
+}
