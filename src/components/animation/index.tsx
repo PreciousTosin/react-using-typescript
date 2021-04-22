@@ -15,7 +15,7 @@ const Animation = () => {
       <div className="animation-playground">
         <p>Animation sublinks or links</p>
 
-        <div>Animate expand and collapse example</div>
+        <div className="title">Animate expand and collapse example</div>
         <div>
           <ExpandCollapse />
         </div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import AnimateMenu from "./animate";
+import "./index.scss";
 
 const ExpandCollapse = () => {
   React.useEffect(() => {
