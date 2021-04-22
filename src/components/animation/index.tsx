@@ -1,5 +1,7 @@
-import React from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
+
+import ExpandCollapse from "./css-expand-collapse";
 
 import "./index.scss";
 
@@ -12,6 +14,11 @@ const Animation = () => {
 
       <div className="animation-playground">
         <p>Animation sublinks or links</p>
+
+        <div>Animate expand and collapse example</div>
+        <div>
+          <ExpandCollapse />
+        </div>
       </div>
     </div>
   );

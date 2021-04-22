@@ -1,4 +1,4 @@
-class Menu {
+class AnimateMenu {
   constructor() {
     this._menu = document.querySelector(".js-menu");
     this._menuContents = this._menu.querySelector(".js-menu-contents");
@@ -63,6 +63,7 @@ class Menu {
   }
 
   toggle() {
+    console.log("TOGGLING MENU");
     if (this._expanded) {
       this.collapse();
       return;
@@ -209,4 +210,4 @@ class Menu {
   }
 }
 
-new Menu();
+export default AnimateMenu;

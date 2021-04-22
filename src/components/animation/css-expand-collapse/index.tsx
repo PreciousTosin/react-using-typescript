@@ -1,6 +1,12 @@
-import React from "react";
+import * as React from "react";
+
+import AnimateMenu from "./animate";
 
 const ExpandCollapse = () => {
+  React.useEffect(() => {
+    new AnimateMenu();
+  }, []);
+
   return (
     <nav className="menu js-menu">
       <div className="menu__contents js-menu-contents">
