@@ -1,6 +1,7 @@
 import * as React from "react";
 //@ts-ignore
-import { Collapse } from "react-collapse";
+// import { Collapse } from "react-collapse";
+import Collapse from "@kunukn/react-collapse";
 import cx from "classnames";
 
 import "./index.scss";
@@ -36,12 +37,15 @@ const ReactAccordion = () => {
         </button>
 
         <Collapse
-          isOpened={state.isOpen2}
-          theme={{
-            collapse: `collapse collapse-gradient ${
-              state.isOpen2 ? "collapse-active" : ""
-            }`
-          }}
+          isOpen={state.isOpen2}
+          className={`collapse collapse-gradient ${
+            state.isOpen2 ? "collapse-active" : ""
+          }`}
+          // theme={{
+          //   collapse: `collapse collapse-gradient ${
+          //     state.isOpen2 ? "collapse-active" : ""
+          //   }`
+          // }}
           transition="height 800ms cubic-bezier(0.4, 0, 0.2, 1)"
           aria-hidden={state.isOpen2 ? "false" : "true"}
           elementType="article"
