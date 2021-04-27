@@ -1,5 +1,9 @@
-import React from "react";
+import * as React from "react";
 import { Link } from "react-router-dom";
+
+import ExpandCollapse from "./css-expand-collapse";
+import ReactAccordion from "./js-expand-collapse";
+import CustomExpandCollapse from "./custom-expand-collapse";
 
 import "./index.scss";
 
@@ -12,6 +16,13 @@ const Animation = () => {
 
       <div className="animation-playground">
         <p>Animation sublinks or links</p>
+
+        <div className="title">Animate expand and collapse example</div>
+        <div>{/* <ExpandCollapse /> */}</div>
+        <div>Next animation</div>
+        <ReactAccordion />
+        <div>custom expand animation</div>
+        <CustomExpandCollapse />
       </div>
     </div>
   );
